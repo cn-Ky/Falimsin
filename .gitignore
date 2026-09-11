@@ -1,0 +1,17 @@
+node_modules/
+.expo/
+.DS_Store
+*.log
+
+# Expo / React Native native build output
+.gradle/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Environment files
+.env
+.env.*
+!.env.examplenode_modules
