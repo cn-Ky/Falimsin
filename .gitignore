@@ -14,4 +14,4 @@ node_modules/
 # Environment files
 .env
 .env.*
-!.env.examplenode_modules
+!.env.example

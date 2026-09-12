@@ -6,8 +6,13 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "falimsin",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Kahve falı ve el falı için fincan veya avuç içi fotoğrafı çekebilmen için kameraya ihtiyacımız var.",
+        "NSPhotoLibraryUsageDescription": "Fal baktırmak için galeriden fotoğraf seçebilmen için kütüphaneye ihtiyacımız var."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +21,28 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "react-native-gesture-handler",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Fal baktırmak için galeriden fotoğraf seçebilmen için kütüphaneye ihtiyacımız var.",
+          "cameraPermission": "Kahve falı ve el falı için fotoğraf çekebilmen için kameraya ihtiyacımız var."
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ]
+    ]
   }
 }

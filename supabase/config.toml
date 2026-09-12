@@ -1,0 +1,7 @@
+project_id = "falimsin"
+
+[functions.daily-horoscope]
+verify_jwt = true
+
+[functions.fal-yorumu]
+verify_jwt = true
